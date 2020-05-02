@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* *->universal selector */
+            box-sizing: border-box;
+        }
+        #mainBlock::after{
+                display: block;
+                content:"";
+                clear:both;
+        }
+        #block1,#block2{
+            width:50%;
+            padding:10px 0px 10px 10px;
+        }
+        #block1{
+            background-color: yellow;
+            float:left;
+        }
+        #block2{
+            background-color: aqua;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainBlock">
+        <div id="block1">
+            <h1>Block1</h1>
+        </div>
+        <div id="block2">
+            <h1>Block2</h1>
+        </div>
+    </div>
+</body>
+</html>
