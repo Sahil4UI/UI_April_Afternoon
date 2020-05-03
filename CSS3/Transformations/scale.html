@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:600px;
+            height: 400px;
+            margin:200px auto 0 auto;
+        }
+        img{
+            transition:2s;
+            height: inherit;
+            width:inherit;
+        }
+        div:hover img{
+            /* zoom in */
+            /* transform: scaleX(2) scaleY(2); */
+            /* zoom out */
+            transform: scale(0.2,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://cdn.pocket-lint.com/r/s/1200x/assets/images/147767-tv-feature-what-order-should-you-watch-all-the-star-wars-films-image1-1wdfjceytb.jpg" alt="">
+    </div>
+</body>
+</html>

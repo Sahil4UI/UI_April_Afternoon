@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #DoorFrame{
+            height:600px;
+            width:500px;
+            border:20px solid brown;
+            border-bottom: none;
+            margin:100px auto 0 auto;
+            perspective: 1000px;
+        }
+        .door{
+            height: inherit;
+            width:50%;
+            border:1px solid #000;
+            transition: 2s;
+        }
+        .doorLeft,.doorRight{
+            background-color: cadetblue;
+        }
+        .doorLeft{
+            float:left;
+            transform-origin: left;
+        }
+        .doorRight{
+            float:right;
+            transform-origin: right;
+        }
+        #DoorFrame:after{
+            content:"";
+            clear:both;
+            display: block;
+        }
+        #DoorFrame:hover .doorLeft{
+            transform: rotateY(-90deg);
+
+        }
+        #DoorFrame:hover .doorRight{
+            transform: rotateY(90deg);
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="DoorFrame">
+        <div class="doorLeft door"></div>
+        <div class="doorRight door"></div>
+    </div>
+</body>
+</html>

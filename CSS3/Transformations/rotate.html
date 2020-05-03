@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:200px;
+            width:200px;
+            margin:200px auto 0 auto;
+        }
+        img{
+            height: inherit;
+            width: inherit;
+            transition: 2s;
+        }
+        div:hover img{
+            /* transform: rotateX(-360deg); */
+            /* transform: rotateY(360deg); */
+            transform:translateX(200px) rotateZ(360deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Kingtutcoinobv_without_background.png/170px-Kingtutcoinobv_without_background.png" alt="">
+    </div>
+</body>
+</html>
