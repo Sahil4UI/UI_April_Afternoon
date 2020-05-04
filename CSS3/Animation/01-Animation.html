@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:2px solid red;
+        }
+        img{
+            /* animation:duration name timing-function interation count */
+            animation: 3s mario linear infinite;
+            /* animation-iteration-count: 2; */
+        }
+        @keyframes mario{
+            /* starting */
+            from{
+                transform: translateX(0px);
+            }
+            /* destination */
+            to{
+                transform: translateX(900px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://supermariobros.io/themes/super-mario/resources/images/loading_mario.gif" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:2px solid red;
+        }
+        img{
+            /* animation:duration name timing-function interation count */
+            animation: 10s mario linear infinite;
+            /* animation-iteration-count: 2; */
+        }
+        @keyframes mario{
+           0%{
+                transform: translateX(0);
+           }
+           50%{
+            transform: translateX(900px);
+           }
+           51%{
+            transform: translateX(900px) rotateY(180deg);
+           }
+           100%{
+                transform: translateX(0) rotateY(180deg);
+           }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://supermariobros.io/themes/super-mario/resources/images/loading_mario.gif" alt="">
+    </div>
+</body>
+</html>
