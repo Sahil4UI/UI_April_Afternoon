@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+        }
+        #slideshow{
+            height:700px;
+            border:2px solid #000;
+            background-size: 100% 100%;
+            animation: 20s slideShow linear infinite;
+        }
+        @keyframes slideShow
+        {
+            0%,18%{
+                background-image: url("https://miro.medium.com/max/3840/1*IXj6F6TiST3LK9r50a-MLw.jpeg");
+            }
+            20%,38%{
+                background-image: url("https://media4.s-nbcnews.com/i/newscms/2018_28/2493076/180710-ant-man-se-143p_25b0a51eb8c0f3ce903ffcb2743d194a.jpg");
+            }
+            40%,58%{
+                background-image: url("https://www.screengeek.net/wp-content/uploads/2018/12/captain-marvel-mcu.jpg");
+            }
+            60%,78%{
+                background-image: url("https://static0.srcdn.com/wordpress/wp-content/uploads/2019/05/Chris-Evans-as-Captain-America-in-the-Quantum-Realm.jpg");
+            }
+            80%,98%{
+                background-image: url("https://api.time.com/wp-content/uploads/2017/07/brb1740_trbcomp_v411-1171.jpg");
+            }
+            100%{
+                background-image: url("https://miro.medium.com/max/3840/1*IXj6F6TiST3LK9r50a-MLw.jpeg");
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="slideshow">
+
+    </div>
+</body>
+</html>

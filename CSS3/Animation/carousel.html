@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin:0;
+            overflow-x: hidden;
+        }
+        #carousel{
+            width:500%;
+            animation: 20s car linear infinite;
+        }
+        .slide{
+            height:300px;
+            width:20%;
+            margin: 0px -2px;
+            display: inline-block;
+        }
+        img{
+            height: 100%;
+            width:100%;
+        }
+        @keyframes car{
+            0%,20%{
+                transform: translateX(0%);
+            }
+            25%,40%{
+                transform: translateX(-20%);
+            }
+            50%,60%{
+                transform: translateX(-40%);
+            }
+            75%,100%{
+                transform: translateX(-60%);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="carousel">
+        <div class="slide">
+            <img src="https://rukminim1.flixcart.com/flap/1688/280/image/b525659072949e79.jpg?q=50" alt="">
+        </div>
+        <div class="slide">
+            <img src="https://rukminim1.flixcart.com/flap/1688/280/image/025636542da3bbc6.jpg?q=50" alt="">
+        </div>
+        <div class="slide">
+            <img src="https://i.pinimg.com/originals/37/e9/e0/37e9e012b6e0f2a3edf47438f066958d.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="https://rukminim1.flixcart.com/flap/1800/1800/image/c359da.jpg?q=80" alt="">
+        </div>
+        <!-- <div class="slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTzFt6Y14XLWcYtVdtlgOLcdtifb4c3FUsJ8HoimBEBipPBC5QD&usqp=CAU" alt="">
+        </div> -->
+    </div>
+</body>
+</html>
