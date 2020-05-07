@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("https://scx2.b-cdn.net/gfx/news/hires/2019/galaxy.jpg");
+            margin:0;
+            background-size: cover;
+        }
+        #solarSystem{
+            height:400px;
+            width:  400px;
+            margin:200px auto 0 auto;
+            position: relative;
+        }
+        .sun{
+            height:inherit;
+            width:inherit;
+        }
+        .earth{
+            height:200px;
+            width:200px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-left: -100px;
+            margin-top:-100px;
+            animation: 10s orbit linear infinite;
+        }
+        @keyframes orbit{
+            0%{
+                transform: translateX(0) scale(1);
+            }
+            25%{
+                transform: translateX(500px) scale(0.6);
+            }
+            50%{
+                transform: translateX(0) scale(0.4);
+                z-index: -1000;
+            }
+            75%{
+                transform: translateX(-500px) scale(0.6);
+            }
+            100%{
+                transform: translateX(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="solarSystem">
+        <img class="sun" src="https://www.planetsforkids.org/wp-content/uploads/2019/06/the-sun.png" alt="">
+        <img class="earth" src="https://qph.fs.quoracdn.net/main-qimg-0dc968448592a7d533096b74c263cc40" alt="">
+    </div>
+</body>
+</html>

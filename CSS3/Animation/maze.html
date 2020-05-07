@@ -5,21 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            margin:0;
+        #board{
+        
+         height: 100vh;
+         width: 100%;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;
+        background-image: url("https://lh3.googleusercontent.com/proxy/1lk_v3AvWSofd41gmPrwHQdtT6n6Gdq8-2NvXDr4d6hnwdu3e3X8B5grwjdZlvXjLBQzO0w0bAS0NBceG3fiIp_pjEmQMjWaz2MrE0w");
         }
-        div{
-            height: 100vh;
-            width:100%;
-            background-image: url("https://dnlzsmybcpo0z.cloudfront.net/games/images/map_img_877153_1487876453.gif");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
+       
+        img{
+            width: 150px;
+            height: 100px;
+            animation: 10s mario linear infinite;
+           margin: 10px;
+        }
+        @keyframes mario{
+            0%{
+                transform: translateY(450px) rotateZ(-90deg);
+            }
+            4%{
+                transform: translateY(300px) rotateZ(-90deg)
+            }
+           5%{
+               transform: translateY(300px) ;
+           }
+           
+           10%{
+               transform: translateY(300px) translateX(200px);
+           }
+           11%{
+            transform:translateY(300px) translateX(200px)  rotateZ(90deg);
+           }
+           15%{
+               transform:translateX(200px) translateY(460px) rotateZ(90deg);
+           }
+           16%{
+            transform:translateX(200px) translateY(460px);
+           }
+           20%{
+               transform: translateY(460px) translateX(350px) ;
+           }
+           21%{
+            transform: translateY(460px) translateX(350px) rotateZ(-90deg);
+           }
+          
+           25%{
+               transform: translateX(350px) translateY(300px) rotateZ(-90deg);
+           }
+           26%{
+            transform: translateX(350px) translateY(300px);
+           }
+           
+           30%{
+               transform: translateY(300px) translateX(650px);
+           }
+           31%{
+            transform: translateY(300px) translateX(650px) rotateZ(-90deg);
+           }
+           40%{
+              transform: translateX(650px) translateY(70px);
+           }
+           41%{
+            transform: translateX(650px) translateY(70px) rotateY(180deg);
+
+           }
+           64%{
+           
+            transform: translateY(70px) translateX(10px) rotateY(180deg);
+
+           }
+           65%{
+              transform: translateY(70px) translateX(10px)rotateZ(-90deg);
+           }
+           69%{
+            transform: translateX(10px) translateY(30px) rotateZ(-90deg);
+           }
+          72%
+           {
+              transform: translateX(10px) translateY(30px);
+           }
+           
+           100%{
+            transform: translateY(30px) translateX(1000px);
+           }
+
+
         }
     </style>
 </head>
 <body>
-    <div>
-        <img src="https://supermariobros.io/themes/super-mario/resources/images/loading_mario.gif" alt="">
+    <div id="board">
+        <img src="https://supermariobros.io/themes/super-mario/resources/images/loading_mario.gif">
+    
     </div>
 </body>
 </html>
