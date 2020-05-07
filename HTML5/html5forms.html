@@ -1,0 +1,103 @@
+<!-- forms -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="login.html">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" placeholder="Enter Your Name" required></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>Phone No</td>
+                
+                <td><input type="text" name="" id="" pattern="[0-9]{10}" ></td>
+            </tr>
+            <!-- tr>td*2 -->
+            <tr>
+                <td>
+                    <input type="date" name="" id="">
+                </td>
+                <td>
+                    <input type="time" name="" id="">
+                </td>
+                <td>
+                    <input type="datetime-local" name="" id="">
+                </td>
+                <td>
+                    <input type="month" name="" id="">
+                </td>
+                <td>
+                    <input type="week" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Select Range</td>
+                <td>
+                    <input type="range" name="" id="" min="0" max="1000" value="500" onchange="output.value=value" step="50">
+                </td>
+                <td>
+                    <output id="output"></output>
+                </td>
+            </tr>
+            <tr>
+                <td>Your Progress</td>
+                <td>
+                    <progress max="100" min="0" value="50"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>
+                    <input type="number" name="" id="" min="18">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Color
+                </td>
+                <td>
+                    <input type="color" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td>
+                    <input type="url" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>COmment Section</td>
+                <td>
+                    <textarea name="" id="" cols="50" rows="10"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td> <button type="reset">CLEAR</button> </td>
+                <td> <button type="submit">LOGIN</button> </td>
+            </tr>
+
+
+        </table>
+    </form>
+</body>
+</html>
