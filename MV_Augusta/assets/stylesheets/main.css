@@ -1,0 +1,112 @@
+/* default settings */
+body
+{
+    margin:0;
+    font-family: 'nunito';
+}
+*{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top:0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+/* header section */
+#header
+{
+    background:linear-gradient(to right,#1A1A1A,#312921,#1A1A1A);
+}
+#header .menu-left ul
+{
+    display: flex;
+    justify-content: flex-end;
+}
+#header ul{
+    margin-top:2em;
+}
+#header .menu-right ul{
+    display: flex;
+    justify-content: flex-start;
+}
+#header ul li{
+    margin:0 1em;
+}
+#header ul li a{
+    color:#a27b3e;
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding-bottom: 1.2em;
+    display: block;
+    border-bottom: 3px solid #a27b3e;
+    border-radius: 2px;
+
+}
+#header .logo{
+    position: relative;
+    margin-top:1em;
+}
+#header .logo img{
+    position: absolute;
+    pointer-events: none;
+    left:50%;
+    
+}
+.logo .logo-circle{
+    width:60px;
+    height: 60px;
+    z-index: 100;
+    margin-left: -30px;
+    top:40px;
+    z-index: 400;
+   
+    
+}
+.logo .logo-gear{
+    width: 80px;
+    height: 80px;
+    margin-left:-40px;
+    top:50px;
+    margin-top:-20px;
+    z-index: 300;
+    transition: 10s;
+
+}
+.logo .logo-mv{
+    width:80px;
+    z-index: 500;
+    margin-left: -40px;
+    top:30px;
+}
+.logo:hover .logo-gear{
+    transform: rotateZ(360deg);
+}
+
+.logo .logo-agusta{
+    width:70px ;
+    margin-left: -35px;
+    top:6px;
+}
+.logo .logo-whisker{
+    width:85%;
+    margin-left: -42.5%;
+    z-index: 450;
+    bottom: -86px;
+}
+.menubar-right{
+    display: flex;
+    justify-content: space-between;
+
+}
+.menu-right{
+    width:55%;
+}

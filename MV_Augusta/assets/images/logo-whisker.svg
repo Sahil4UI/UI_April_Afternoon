@@ -1,0 +1,20 @@
+<svg width="270.9" height="31.8" xmlns="http://www.w3.org/2000/svg">
+ <title>logo-whisker</title>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="Layer_2">
+   <g id="Layer_2-2">
+    <polygon id="svg_1" stroke-width="1.4" stroke-miterlimit="10" stroke="#000000" fill="#ffffff" points="6.85165548324585,0.3241722881793976 136.35165405273438,0.3241722881793976 137.55165100097656,15.224172443151474 153.95164489746094,0.3241722881793976 265.6516418457031,0.3241722881793976 138.35165405273438,30.72417339682579 6.85165548324585,0.3241722881793976 "/>
+   </g>
+   <path stroke="null" id="svg_2" fill="#C20E1A" d="m265.160358,0.434536l-110.871572,25.847365l11.776543,-25.268173l99.040935,-0.579192l0.054094,0z"/>
+   <g stroke="null" transform="rotate(-0.04427798092365265 57.85317993163909,10.833539009098711) " id="svg_17">
+    <path stroke="null" id="svg_16" fill="#289548" d="m11.923074,0.857322l86.338357,19.952434l5.521855,-19.818336l-91.860212,-0.134098z"/>
+   </g>
+  </g>
+ </g>
+</svg>
