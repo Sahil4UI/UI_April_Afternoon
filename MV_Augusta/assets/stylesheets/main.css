@@ -10,7 +10,7 @@ body
 h1,h2,h3,h4,h5,h6{
     margin-top:0;
 }
-a{
+a:hover{
     text-decoration: none;
 }
 ul{
@@ -51,13 +51,18 @@ ul{
     border-radius: 2px;
 
 }
+.logo-container{position: relative;}
 #header .logo{
-    position: relative;
+    /* position: relative; */
     margin-top:1em;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+
 }
 #header .logo img{
     position: absolute;
-    pointer-events: none;
+    /* pointer-events: none; */
     left:50%;
     
 }
@@ -78,7 +83,7 @@ ul{
     top:50px;
     margin-top:-20px;
     z-index: 300;
-    transition: 10s;
+    transition: 5s;
 
 }
 .logo .logo-mv{
@@ -86,9 +91,15 @@ ul{
     z-index: 500;
     margin-left: -40px;
     top:30px;
+
 }
-.logo:hover .logo-gear{
+
+.logo a:hover .logo-gear{
     transform: rotateZ(360deg);
+}
+
+.logo :hover img:not(.logo-mv){
+    filter: brightness(30%);
 }
 
 .logo .logo-agusta{
@@ -96,11 +107,12 @@ ul{
     margin-left: -35px;
     top:6px;
 }
+
 .logo .logo-whisker{
     width:85%;
     margin-left: -42.5%;
     z-index: 450;
-    bottom: -86px;
+    bottom: 115px;
 }
 .menubar-right{
     display: flex;
@@ -109,4 +121,32 @@ ul{
 }
 .menu-right{
     width:55%;
+}
+#header .lang{
+    margin:1.8em;
+}
+#header .lang a{
+    color:#a27b3e;
+    
+}
+
+/* section Banner */
+#Banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://www.mvagusta.com/documents/20126/304495/full.jpg/d35231af-306b-a15d-0e5f-5f5b123645b8?t=1589226955157");
+    background-size: 100% 100%;
+
+    position: relative;
+}
+#Banner:after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("https://www.mvagusta.com/o/mv-agusta-theme/images/pic/mask-header.png");
+    background-size: cover;
+    width:100%;
+    height:300px;
+    bottom:0;
+    
 }
