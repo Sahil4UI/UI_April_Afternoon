@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printName()
+        {
+            // get by id
+            // get by class
+            // get by tagname
+            // document.getElementById("id");
+            // document.getElementsByClassName("className");
+            // document.getElementsByTagName("tagname");
+            // document.getElementsByName("Name");
+
+        //    Name=  document.getElementById("box1").value;
+        //    span = document.getElementById("Result");
+        //    span.innerText = Name;
+
+        document.getElementById("Result").innerText = document.getElementById("box1").value; 
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="texbox" id="box1" class="box" placeholder="ENTER NAME ">
+    <button onclick="printName();">CLICK ME</button>
+    <button type="reset">RESET</button>
+    <h1>Hello <span id="Result"> </span></h1>
+
+ 
+
+</body>
+</html>
