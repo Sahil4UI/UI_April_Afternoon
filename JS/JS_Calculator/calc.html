@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // window.addEventListener("load",init);
+        // function init()
+        // {
+        //     fnum  =  document.getElementById("firstNum");
+        //     snum  =  document.getElementById("secondNum");
+        
+        //     document.getElementById("addition").addEventListener("click",add);
+        //     document.getElementById("substraction").addEventListener("click",sub);
+
+        // }
+
+            // Anonymous Function 
+        window.addEventListener("load",function()
+        {
+            fnum  =  document.getElementById("firstNum");
+            snum  =  document.getElementById("secondNum");
+            document.getElementById("addition").addEventListener("click",add);
+            document.getElementById("substraction").addEventListener("click",sub);
+        }
+        
+        );
+        
+
+        function add()
+        {
+             result = parseInt(fnum.value)+parseInt(snum.value);
+             document.getElementById("Result").innerText = result;
+        }
+
+        function sub()
+        {
+             result = parseInt(fnum.value)-parseInt(snum.value);
+             document.getElementById("Result").innerText = result;
+        }
+     </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <label for="firstNum">Number 1</label>
+            </td>
+            <td>
+                <input type="text" name="" id="firstNum" placeholder="Enter First Number :">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="secondNum">Number 2</label>
+            </td>
+            <td>
+                <input type="text" name="" id="secondNum" placeholder="Enter Second Number :">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button id="addition">+</button>
+                <button id="substraction">-</button>
+                <button id="multiplication">*</button>
+                <button id="division">/</button>
+            </td>
+        </tr>
+    </table>
+    <h2>Result is <span id="Result"></span></h2>
+
+
+
+
+</body>
+</html>
