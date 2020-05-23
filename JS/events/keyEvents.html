@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Key Events - 
+    1.key press
+    2.key down
+    3.key up -->
+
+    <!-- <input type="text" name="" placeholder="Enter name" onkeypress="show(this)"> -->
+    <!-- <input type="text" name="" placeholder="Enter name" onkeydown="show(this)"> -->
+    <input type="text" name="" placeholder="Enter name" onkeyup="show(this)">
+
+    
+    <span class="display"></span>
+
+    <script>
+        function show(obj)
+        {
+            console.log("function called");
+            var name = obj.value;
+            document.querySelector(".display").innerText = name;
+        }
+    </script>
+</body>
+</html>

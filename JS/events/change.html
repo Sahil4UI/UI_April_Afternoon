@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="box1" placeholder="Enter Name" onchange="validate(this)">
+    <span class="error"></span>
+
+    <script>
+
+function validate(obj)
+{
+    console.log("function called");
+    var userName = obj.value;
+    console.log(userName);
+
+    if (userName.length == 0 || userName == "")
+    {
+        document.querySelector(".error").innerText = "Please Enter Your Name";
+        obj.style.border = "1px solid red";
+    }
+    else
+    {
+        document.querySelector(".error").innerText = "";
+        obj.style.border = "1px solid green";
+
+    }
+}
+    </script>
+</body>
+</html>

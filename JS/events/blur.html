@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="box1" placeholder="Enter Name">
+    <span class="error"></span>
+    <script>
+        input = document.getElementById("box1");
+        input.addEventListener("blur",validate);
+
+        function validate()
+        {
+            var userName = input.value;
+            console.log(userName);
+
+            if (userName.length == 0 || userName == "")
+            {
+                document.querySelector(".error").innerText = "Please Enter Your Name";
+                input.style.border = "1px solid red";
+            }
+            else
+            {
+                document.querySelector(".error").innerText = "";
+                input.style.border = "1px solid green";
+
+            }
+        }
+    </script>
+</body>
+</html>

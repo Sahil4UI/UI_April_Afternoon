@@ -17,14 +17,30 @@ window.addEventListener("load",function ()
 }
 );
 
+var n1 = "";
+var OperatorFlag = false;
+
 function appendNumbers(){
    num =  event.srcElement.innerText;
-   document.getElementById("box").value += num;
+   n1 += num;
+   document.getElementById("box").value = n1;
+   OperatorFlag =false;
 }
 
 function appendOperators(){
+
     opr =  event.srcElement.innerText;
-    document.getElementById("box").value += opr;
+    if (!OperatorFlag)
+    {
+        n1 += opr;
+        OperatorFlag= true;
+    }
+    else{
+        n1 = n1.slice(0,n1.length-1);
+        n1 +=opr;
+    }
+
+    document.getElementById("box").value = n1;
  }
  
  function Evaluate()
