@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+          box-sizing:border-box;
+      }
+      section{
+          display: flex;
+      }
+        img{
+            width:50%;
+            height: 800px;
+        }
+        .image1{
+            transition: 2s;
+            transform: translateX(-120%);
+        }
+       .image2{
+           transition: 2s;
+           transform: translateX(120%);
+       }
+
+       .active .image1 , 
+       .active .image2{
+           transform:translateX(0%);
+       }
+    </style>
+</head>
+<body>
+    <h1>SCROLL EVENT IN JAVASCRIPT</h1>
+    <div id="content">
+        <section id="section1">
+            <img src="https://www.cartoonbrew.com/wp-content/uploads/2019/03/tomandjerry_feature-580x326.jpg" alt="" class="image1">
+            <img src="https://mc.webpcache.epapr.in/mcms.php?size=large&in=https://mcmscache.epapr.in/post_images/website_350/post_15665502/thumb.jpg" alt="" class="image2">
+        </section>
+
+        <section >
+            <img src="https://www.cartoonbrew.com/wp-content/uploads/2019/03/tomandjerry_feature-580x326.jpg" alt="" class="image1">
+            <img src="https://mc.webpcache.epapr.in/mcms.php?size=large&in=https://mcmscache.epapr.in/post_images/website_350/post_15665502/thumb.jpg" alt="" class="image2">
+        </section>
+        <section >
+            <img src="https://www.cartoonbrew.com/wp-content/uploads/2019/03/tomandjerry_feature-580x326.jpg" alt="" class="image1">
+            <img src="https://mc.webpcache.epapr.in/mcms.php?size=large&in=https://mcmscache.epapr.in/post_images/website_350/post_15665502/thumb.jpg" alt="" class="image2">
+        </section>
+        <section >
+            <img src="https://www.cartoonbrew.com/wp-content/uploads/2019/03/tomandjerry_feature-580x326.jpg" alt="" class="image1">
+            <img src="https://mc.webpcache.epapr.in/mcms.php?size=large&in=https://mcmscache.epapr.in/post_images/website_350/post_15665502/thumb.jpg" alt="" class="image2">
+        </section>
+        <section >
+            <img src="https://www.cartoonbrew.com/wp-content/uploads/2019/03/tomandjerry_feature-580x326.jpg" alt="" class="image1">
+            <img src="https://mc.webpcache.epapr.in/mcms.php?size=large&in=https://mcmscache.epapr.in/post_images/website_350/post_15665502/thumb.jpg" alt="" class="image2">
+        </section>
+        <section>
+            <img src="https://www.cartoonbrew.com/wp-content/uploads/2019/03/tomandjerry_feature-580x326.jpg" alt="" class="image1">
+            <img src="https://mc.webpcache.epapr.in/mcms.php?size=large&in=https://mcmscache.epapr.in/post_images/website_350/post_15665502/thumb.jpg" alt="" class="image2">
+        </section>
+        <section id="section2">
+            <img src="https://www.cartoonbrew.com/wp-content/uploads/2019/03/tomandjerry_feature-580x326.jpg" alt="" class="image1">
+            <img src="https://mc.webpcache.epapr.in/mcms.php?size=large&in=https://mcmscache.epapr.in/post_images/website_350/post_15665502/thumb.jpg" alt="" class="image2">
+        </section>
+    </div>
+
+    <script>
+        var section = document.querySelectorAll("section") ;
+        window.addEventListener("scroll",function()
+        {
+            var scrollY = window.scrollY;
+            
+            for (i=0;i<section.length;i++)
+            {
+                SectionY = scrollY - section[i].offsetTop;
+                
+                if (SectionY > -400)
+                {
+                    section[i].className ="active";
+                }
+            }
+        })
+       
+
+    </script>
+</body>
+</html>
