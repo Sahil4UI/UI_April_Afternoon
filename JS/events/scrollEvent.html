@@ -13,7 +13,7 @@
       }
         img{
             width:50%;
-            height: 800px;
+            height: 600px;
         }
         .image1{
             transition: 2s;
@@ -72,9 +72,9 @@
             
             for (i=0;i<section.length;i++)
             {
-                SectionY = scrollY - section[i].offsetTop;
+                SectionY = section[i].offsetTop;
                 
-                if (SectionY > -400)
+                if (scrollY > SectionY )
                 {
                     section[i].className ="active";
                 }

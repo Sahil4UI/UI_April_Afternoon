@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- AJAX - Asynchronous JavaScript and XML -->
+    <!-- Asynchronous -->
+    <button onclick="test();">CLICK ME</button>
+    <script>
+
+        function test()
+        {
+            one();
+            two();
+            three();
+            four();
+            five();
+            six();
+        }
+        function one()
+        {
+            console.log("Function 1 called....");
+        }
+        function two()
+        {
+            console.log("Function 2 called....");
+
+        }
+        function three()
+        {
+            
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('get','');
+            xhttp.send();
+            // state - 5
+            // 0 - Request has not been initialized
+            // 1 - Request is initialized but has not been sent
+            // 2 - Request has been sent but not proccesed
+            // 3 - Request is under  processing
+            // 4 - Request has been Processed and response is Ready
+            xhttp.onreadystatechange = function()
+            {
+                if (this.readyState == 4 && this.status == 200)
+                // 200 ->ok
+                // 403 - forbidden
+                //404 - page not found
+                {
+                    for (i=0;i<=10000;i++)
+            {
+                for (j=0;j<=100000;j++)
+                {
+                    var x = i*j;
+                }
+            }
+            console.log("Function 3 called....");
+
+                }
+                // status 3-> 200 connection successful / 404 -webpage not found/403 - forbiddne
+            }
+            
+        }
+        function four()
+        {
+            console.log("Function 4 called....");
+
+
+        }
+        function five()
+        {
+            console.log("Function 5 called....");
+
+        }
+        function six()
+        {
+            console.log("Function  6 called....");
+            
+        }
+    </script>
+</body>
+</html>
