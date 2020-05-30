@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    
+    <input type="text" placeholder="Enter name">
+    <button>CLICK ME</button>
+    <h2>Hello <span id="result"></span> </h2>
+
+
+   <script>
+    //    $('button').click(Output );
+
+
+    //    function Output()
+    //    {
+    //        console.log("function called");
+    //    }
+
+    $('button').click(
+        function()
+           {
+               var username = $("input").val();
+            //    console.log(username);
+               $('#result').html(username);
+           }
+    )
+   </script>
+
+</body>
+</html>
