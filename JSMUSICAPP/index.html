@@ -10,6 +10,9 @@
     <script src="Assets/JS/songsList.js"></script>
     <script src="Assets/JS/main.js"></script>
 
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/cd00034d8b.js" crossorigin="anonymous"></script>
+
 
 
 </head>
@@ -50,9 +53,21 @@
         </div>
     </nav>  
     <div id="musicPlayer">
-        <audio id="audio" controls>
-            
-        </audio>
+        <button id="prev">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play">
+          <i class="far fa-play-circle"></i>
+        </button>
+        <button id="next">
+          <i class="fas fa-forward"></i>
+        </button>
+
+        <audio id="audio" controls></audio>
+        <span id="song_curr_time">00:00</span>
+        <input type="range" name="" id="slider" value="0">
+        <span id="song_total_time">00:00</span>
+
     </div>  
 
     <div id="content">

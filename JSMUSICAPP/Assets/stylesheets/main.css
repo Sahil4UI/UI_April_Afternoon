@@ -23,3 +23,23 @@ audio{
 #songsList h3{
     pointer-events: none;
 }
+#musicPlayer{
+    position: fixed;
+    background-color: aliceblue;
+    padding:20px;
+    width: 100%;
+    left:0;
+    bottom: 0;
+}
+#musicPlayer button{
+    border-radius: 10px;
+    font-size: 50px;
+    color:red;
+}
+#content{
+    margin-top: 100px;
+}
+input[type="range"]
+{
+    width:50%;
+}
