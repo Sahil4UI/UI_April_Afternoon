@@ -5,9 +5,11 @@ function init()
     loadSongs();
     audio = document.querySelector("#audio");
     prevBtn = document.querySelector("#prev");
+    prevBtn.addEventListener("click",prevSong);
     playBtn = document.querySelector("#play");
     playBtn.addEventListener("click",playPause);
     nextBtn = document.querySelector("#next");
+    nextBtn.addEventListener("click",nextSong);
     songTotalTime = document.querySelector("#song_total_time");
     songCurrTime = document.querySelector("#song_curr_time");
     slider  = document.querySelector("#slider");    
@@ -28,16 +30,23 @@ function loadSongs()
           li.setAttribute('title',obj.songId);
        var h3 = document.createElement("h3");
        h3.innerText = obj.songName;
+       h3.className ="text-center"
        var  p  = document.createElement("p");
        p.innerText = obj.artistname;
+       p.className ="text-center";
        var img = document.createElement("img");
        img.src = obj.songImage;
        img.className="w-100";
-
+       var button = document.createElement('button');
+       button.innerText = "ADD TO PLAYLIST";
+       button.className ="btn btn-info d-block w-100";
+       button.addEventListener('click',addToPlayList);
        li.appendChild(img);
        li.appendChild(h3);
        li.appendChild(p);
+       li.appendChild(button);
        ul.appendChild(li);
+
        li.addEventListener('click',playSong);
    })
 
@@ -114,4 +123,71 @@ function playPause()
 function peekSong()
 {
     audio.currentTime = slider.value;
+}
+
+
+function nextSong()
+{   var currSong = audio.src;
+    currSong = currSong.slice(22,currSong.length);
+    currSong = currSong.replace(/%20/g , ' ');
+    
+    var next_song;
+    for (i=0;i<songsList.length;i++)
+    {
+        if (currSong == songsList[i].songSrc)
+        {
+            next_song = songsList[i+1].songSrc;
+            break;
+        }
+
+    }
+    audio.src =next_song;
+    audio.play();
+    // playPause();
+    
+}
+
+function prevSong()
+{
+    
+
+}
+
+function addToPlayList()
+{
+    
+    var addSongId = event.srcElement.parentElement.title;
+    for (var i=0; i<songsList.length;i++)
+    {
+        if (songsList[i].songId == addSongId)
+        {
+            var songObj = songsList[i];
+            object.addToPlayList(songObj.songId,songObj.songName,songObj.songSrc,songObj.songImage);
+            break;
+        }
+    }
+    printPlayList();
+}
+
+function printPlayList()
+{
+    var ul1 = document.querySelector("#playList");
+    ul1.innerHTML="";
+    object.songPlayList.forEach(function(obj)
+    {
+        var span = document.createElement("span");
+        span.innerText = obj.name;
+        span.className ="text-center"
+       
+    
+        var img = document.createElement("img");
+        img.src = obj.image;
+        img.className="w-100";
+
+        var li = document.createElement('li');
+        li.appendChild(img);
+        li.appendChild(span);
+        ul1.appendChild(li);
+    })
+
 }
