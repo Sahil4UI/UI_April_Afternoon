@@ -14,6 +14,10 @@ var object = {
     {
         var x = new Song(id,name,src,image);
         this.songPlayList.push(x);
+    },
+    deleteSong : function()
+    {
+        
     }
 
 }

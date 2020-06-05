@@ -14,6 +14,7 @@ function init()
     songCurrTime = document.querySelector("#song_curr_time");
     slider  = document.querySelector("#slider");    
     slider.addEventListener('change',peekSong);
+    loadMyPlaylist();
 }
 
 
@@ -39,7 +40,7 @@ function loadSongs()
        img.className="w-100";
        var button = document.createElement('button');
        button.innerText = "ADD TO PLAYLIST";
-       button.className ="btn btn-info d-block w-100";
+       button.className ="btn btn-info d-block w-100 ";
        button.addEventListener('click',addToPlayList);
        li.appendChild(img);
        li.appendChild(h3);
@@ -47,14 +48,16 @@ function loadSongs()
        li.appendChild(button);
        ul.appendChild(li);
 
-       li.addEventListener('click',playSong);
+       img.addEventListener('click',playSong);
+       h3.addEventListener('click',playSong);
    })
 
 }
 
 function playSong()
 {
-    var id = event.srcElement.title;
+    console.log("play music called");
+    var id = event.srcElement.parentElement.title;
     for (i=0;i<songsList.length;i++)
     {
         if (songsList[i].songId == id)
@@ -143,7 +146,8 @@ function nextSong()
     }
     audio.src =next_song;
     audio.play();
-    // playPause();
+    flag = true;
+    playPause();
     
 }
 
@@ -167,6 +171,7 @@ function addToPlayList()
         }
     }
     printPlayList();
+    saveMyPlaylist();
 }
 
 function printPlayList()
@@ -177,17 +182,39 @@ function printPlayList()
     {
         var span = document.createElement("span");
         span.innerText = obj.name;
-        span.className ="text-center"
+        span.style.marginLeft ="15px";
        
     
         var img = document.createElement("img");
         img.src = obj.image;
-        img.className="w-100";
+        img.className="w-25";
 
         var li = document.createElement('li');
+        li.style.margin ="10px 2px";
         li.appendChild(img);
         li.appendChild(span);
         ul1.appendChild(li);
     })
 
 }
+
+function saveMyPlaylist()
+{
+    if (window.localStorage)
+    {
+
+        var json = JSON.stringify(object.songPlayList);
+        localStorage.setItem("myPlayList",json);
+    }
+}
+
+function loadMyPlaylist()
+{
+    if(window.localStorage)
+    {
+        var savedPlayList = localStorage.getItem("myPlayList");
+        object.songPlayList = JSON.parse(savedPlayList);
+        printPlayList();
+    }
+}
+
