@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>GET YOUR CURRENT LOCATION : <button onclick="getLocation();">CLICK ME</button></h2>
+    
+    <div id="mapHolder"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN99OD3dWuywz2pY9QR6nIRNOfV3_PRTI&callback=geoLocation"></script>
+
+    <script>
+        function getLocation()
+        {
+            if (navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(showPosition , showError)
+            }
+            else{
+                console.log("Your Browser doesn't Support GEOLOCATION");
+            }
+        }
+
+        function showPosition(position)
+        {
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            console.log(lat,lon);
+            latlong = new google.maps.LatLng(lat,lon);
+            mapholder = document.querySelector("#mapHolder");
+            mapholder.style.height = "400px";
+            mapholder.style.width = "1000px";
+
+            var myOptions = {
+                center : latlong,
+                zoom : 20 ,
+                mapTypeId :google.maps.MapTypeId.ROADMAP,
+                mapTypeControl:false ,
+                navigationControlOptions : {
+                    style : google.maps.NavigationControlStyle.SMALL
+                }
+            };
+
+            var map = new google.maps.Map(mapholder , myOptions);
+            var marker = new google.maps.Marker (
+                {
+                    position:latlong,
+                    map:map,
+                    title:"YOUR POSITION"
+                }
+            );
+
+
+        }
+
+        function showError(error)
+        {
+            switch(error.code)
+            {
+                case error.PERMISSION_DENIED : alert("Permission Denied")
+                     break;
+
+                case error.POSITION_UNAVAILABLE : alert("LOCATION is not Accessible")
+                     break;
+
+                
+                case error.TIMEOUT: alert("Request Time Out")
+                     break;
+                
+                case error.UNKNOWN_ERROR: alert("An Unkown Error has been Occurred")
+                     break;
+
+            }
+        }
+    </script>
+</body>
+</html>
